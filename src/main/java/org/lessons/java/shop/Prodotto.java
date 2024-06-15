@@ -8,8 +8,8 @@ public class Prodotto {
 	private double tax;
 	
     public Prodotto(String name, String description, double price, int tax) {
-    	//numero random compreso tra 1 e 99999999
-    	this.code = 1 + (int) (Math.random() * 99999999);
+    	//numero random compreso tra 1 e 999999
+    	this.code = 1 + (int) (Math.random() * 999999);
     	this.name = name;
     	this.description = description;
     	this.price = price;
@@ -56,6 +56,6 @@ public class Prodotto {
   	
     //conversione in stringa del codice, con padding di zeri a sinistra
     static public String getPaddedCode(int code) {
-        return String.format("%10s", code).replace(' ', '0');
+        return String.format("%8s", code).replace(' ', '0');
     }
 }
