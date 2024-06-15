@@ -2,10 +2,10 @@ package org.lessons.java.shop;
 
 public class Prodotto {
 	private int code;
-	String name;
-	String description;
-	double price;
-	double tax;
+	private String name;
+	private String description;
+	private double price;
+	private double tax;
 	
     public Prodotto(String name, String description, double price, int tax) {
     	//randomico compreso tra 1 e 99999999
@@ -29,4 +29,15 @@ public class Prodotto {
   	public String getFullName () {
   		return code + "-" + name;
   	}
+  	
+  	public String getName() {
+  		return this.name;
+  	}
+  	
+  	public void setName(String newName) {
+  		this.name = newName;
+  	}
+  	
+
+  	
 }
