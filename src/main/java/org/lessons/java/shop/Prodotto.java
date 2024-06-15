@@ -1,7 +1,7 @@
 package org.lessons.java.shop;
 
 public class Prodotto {
-	private int code;
+	final private int code;
 	private String name;
 	private String description;
 	private double price;
