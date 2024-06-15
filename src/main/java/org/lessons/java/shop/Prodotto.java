@@ -20,6 +20,13 @@ public class Prodotto {
     	return this.price;	
     }
     	
-  
-
+    //restituzione del prezzo come stringa, comprensivo di IVA, arrotondato troncato due decimali
+  	public String getFullPrice () {
+  		double temp = this.price + (this.price * (tax / 100));
+  		return String.format("%.2f", temp); 
+  	}
+  	
+  	public String getFullName () {
+  		return code + "-" + name;
+  	}
 }
