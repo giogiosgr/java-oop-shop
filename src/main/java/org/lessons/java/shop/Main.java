@@ -16,11 +16,19 @@ public class Main {
 		  
 		  System.out.println(prodotto1.getName());
 		  
-		  prodotto1.setName("ciaone");
+		  prodotto1.setName("oggettone");
 		  
 		  System.out.println(prodotto1.getName());
 		  
+          prodotto1.setDescription("bellissimo prodotto");
 		  
+		  System.out.println(prodotto1.getDescription());
+		  
+          prodotto1.setPrice(100.01);
+		  
+		  System.out.println(prodotto1.getPrice());
+		  
+		  System.out.println(prodotto1.getCode());
 		  
 	}
 
