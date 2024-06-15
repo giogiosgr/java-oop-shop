@@ -13,7 +13,7 @@ public class Main {
 		
 		  //stampa del nome completo del prodotto in formato codice-nome
 		  System.out.println(prodotto1.getFullName());
-		
+		  
 	}
 
 }
