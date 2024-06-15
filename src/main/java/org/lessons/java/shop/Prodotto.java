@@ -8,7 +8,7 @@ public class Prodotto {
 	private double tax;
 	
     public Prodotto(String name, String description, double price, int tax) {
-    	//randomico compreso tra 1 e 99999999
+    	//numero random compreso tra 1 e 99999999
     	this.code = 1 + (int) (Math.random() * 99999999);
     	this.name = name;
     	this.description = description;
@@ -24,7 +24,7 @@ public class Prodotto {
     	this.price = newPrice;	
     }
     	
-    //restituzione del prezzo come stringa, comprensivo di IVA, arrotondato troncato due decimali
+    //restituzione del prezzo come stringa, comprensivo di IVA, troncato due decimali
   	public String getFullPrice () {
   		double temp = this.price + (this.price * (this.tax / 100));
   		return String.format("%.2f", temp); 
@@ -54,4 +54,8 @@ public class Prodotto {
     	return this.code;
     }
   	
+    //conversione in stringa del codice, con padding di zeri a sinistra
+    static public String getPaddedCode(int code) {
+        return String.format("%10s", code).replace(' ', '0');
+    }
 }
