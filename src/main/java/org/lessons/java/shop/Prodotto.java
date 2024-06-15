@@ -1,7 +1,7 @@
 package org.lessons.java.shop;
 
 public class Prodotto {
-	final private int code;
+	final private int CODE;
 	private String name;
 	private String description;
 	private double price;
@@ -9,7 +9,7 @@ public class Prodotto {
 	
     public Prodotto(String name, String description, double price, int tax) {
     	//numero random compreso tra 1 e 999999
-    	this.code = 1 + (int) (Math.random() * 999999);
+    	this.CODE = 1 + (int) (Math.random() * 999999);
     	this.name = name;
     	this.description = description;
     	this.price = price;
@@ -24,14 +24,14 @@ public class Prodotto {
     	this.price = newPrice;	
     }
     	
-    //restituzione del prezzo come stringa, comprensivo di IVA, troncato due decimali
+    //restituzione del prezzo come stringa, comprensivo di IVA, troncato a due decimali
   	public String getFullPrice () {
   		double temp = this.price + (this.price * (this.tax / 100));
   		return String.format("%.2f", temp); 
   	}
   	
   	public String getFullName () {
-  		return code + "-" + name;
+  		return CODE + "-" + name;
   	}
   	
   	public String getName() {
@@ -51,11 +51,11 @@ public class Prodotto {
   	}
   	
     public int getCode() {
-    	return this.code;
+    	return this.CODE;
     }
   	
     //conversione in stringa del codice, con padding di zeri a sinistra
     static public String getPaddedCode(int code) {
-        return String.format("%8s", code).replace(' ', '0');
+        return String.format("%08d", code);
     }
 }
