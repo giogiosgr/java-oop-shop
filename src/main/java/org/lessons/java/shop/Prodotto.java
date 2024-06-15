@@ -19,6 +19,10 @@ public class Prodotto {
     public double getPrice() {
     	return this.price;	
     }
+    
+    public void setPrice(double newPrice) {
+    	this.price = newPrice;	
+    }
     	
     //restituzione del prezzo come stringa, comprensivo di IVA, arrotondato troncato due decimali
   	public String getFullPrice () {
@@ -38,6 +42,16 @@ public class Prodotto {
   		this.name = newName;
   	}
   	
-
+  	public String getDescription() {
+  		return this.description;
+  	}
+  	
+  	public void setDescription(String newDescription) {
+  		this.description = newDescription;
+  	}
+  	
+    public int getCode() {
+    	return this.code;
+    }
   	
 }
