@@ -1,2 +1,2 @@
-# java-oop-shop
- Esercitazione del 15-06
+### java-oop-shop
+ classe Prodotto che gestisce i prodotti dello shop.
