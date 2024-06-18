@@ -16,6 +16,7 @@ public class Prodotto {
     	this.tax = tax;
     }
     	
+	//definizione vari getters e setters
     public double getPrice() {
     	return this.price;	
     }
@@ -49,6 +50,14 @@ public class Prodotto {
   	public void setDescription(String newDescription) {
   		this.description = newDescription;
   	}
+
+	public double getTax () {
+		return this.tax;
+	}
+
+	public void setTax (double newTax) {
+		this.tax = newTax;
+	}
   	
     public int getCode() {
     	return this.CODE;
